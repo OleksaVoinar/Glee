@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 
@@ -109,6 +110,48 @@
     color: #243f4d;
   }
 }
+
+.top-slider {
+  background-image: url(../images/slider/bg_slider.jpg);
+  padding: 220px 0 280px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    width: 420px;
+    margin-right: 100px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 30px;
+    @extend%rubik-400;
+    margin-bottom: 38px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 72px;
+    line-height: 70px;
+    margin-bottom: 40px;
+    @extend%rubik-500;
+    color: #243f4d;
+  }
+
+  &__btn {
+    padding: 20px 100px 20px 30px;
+    background-color: #a3bbc8;
+  }
+
+  &__img {
+    width: 640px;
+  }
+}
+
+
 
 .footer {
   font-size: 14px;
