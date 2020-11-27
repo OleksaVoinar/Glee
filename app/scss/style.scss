@@ -117,7 +117,7 @@
     background-position: center center;
     background-size: cover;
   }
- 
+
   &__item {
     display: flex;
     justify-content: center;
@@ -194,6 +194,105 @@
   }
 }
 
+.info {
+  background-color: #fef7f0;
+  margin-bottom: 70px;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    padding: 45px 0px;
+    max-width: 200px;
+    position: relative;
+    margin: 0 185px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      border-right: 1px solid #e8e4df;
+      height: 100%;
+      top: 0;
+      right: -107%;
+    }
+  }
+
+
+
+  // не сробатывают значения для title и text
+  // &__title {
+  //   @extend %dmsans-700;
+  //   font-size: 18px;
+  //   line-height: 40px;
+  //   color: #414141;
+  // }
+
+  .info__item-title {
+    // а если так записываю тогда работают .info__item-title .info__item-text почему так?
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2;
+    color: #414141;
+    margin-bottom: 20px;
+  }
+
+  .info__item-text {
+    @extend %dmsans-400;
+    font-size: 16px;
+    color: #585858;
+  }
+
+  &__item--time::before,
+  &__item--delivery:before,
+  &__item--mail::before {
+    position: absolute;
+    content: "";
+    background-image: url('../images/icons/info_icon_1.svg');
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 60px;
+    left: -80px;
+    top: 51px;
+  }
+
+  &__item--delivery:before {
+    background-image: url('../images/icons/info_icon_2.svg');
+  }
+
+  &__item--mail::before {
+    background-image: url('../images/icons/info_icon_3.svg');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
   font-size: 14px;
 
@@ -269,6 +368,7 @@
       }
     }
   }
+
   .footer-bootom {
     padding: 35px 0px;
     display: flex;
